@@ -3,7 +3,7 @@ using System;
 int number;
 
 Random randomGenerator = new Random();
-int rnumber = randomGenerator.Next(1, 11);
+int rnumber = randomGenerator.Next(1, 50);
 Console.WriteLine("What's the magic number?");
 do
 {
