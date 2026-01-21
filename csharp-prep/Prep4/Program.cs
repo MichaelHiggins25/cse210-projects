@@ -15,6 +15,10 @@ class Program
             numbers.Add(usenumber);
         }
         int sum = numbers.Sum();
-        Console.WriteLine(sum);
+        Console.WriteLine($"The sum is:{sum}");
+        double average = numbers.Average();
+        Console.WriteLine($"The average is: {average}");
+        int max = numbers.Max();
+        Console.WriteLine($"The largest number is: {max}");
     }
 }
