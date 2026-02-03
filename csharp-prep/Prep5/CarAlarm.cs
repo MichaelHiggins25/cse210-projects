@@ -33,8 +33,14 @@ public class Car
             {
                 if (driverDoor.IsOpen || passengerDoor.IsOpen)
                 {
-                    carHorn.Honk();
+                    carHorn.Honk3();
                 }
+            }
+
+            if (clicker.Pressed)
+            {
+                carHorn.Honk1();
+                clicker.Pressed = false;
             }
 
             // 3. GET INPUT
@@ -45,7 +51,8 @@ public class Car
             else if (input == "2") passengerDoor.Toggle();
             else if (input == "3") clicker.IsArmed = true;
             else if (input == "4") clicker.IsArmed = false;
-            else if (input == "5") IsRunning = false;
+            else if (input == "5") clicker.Pressed = true;
+            else if (input == "6") IsRunning = false;
             else Console.WriteLine("Invalid choice, try again.");
 
             // 4. SHOW CURRENT STATE
@@ -65,7 +72,8 @@ public class Car
         Console.WriteLine("2. Open/Close Passenger Door");
         Console.WriteLine("3. Set Alarm (Arm)");
         Console.WriteLine("4. Disable Alarm (Disarm)");
-        Console.WriteLine("5. Exit Program");
+        Console.WriteLine("5. Beep Car");
+        Console.WriteLine("6. Exit Program");
     }
 }
 
@@ -90,7 +98,7 @@ public class Door
 
 public class Horn
 {
-    public void Honk()
+    public void Honk3()
     {
         Console.WriteLine("\n!!! ALARM TRIGGERED !!!");
         for (int i = 0; i < 3; i++)
@@ -99,9 +107,17 @@ public class Horn
             Thread.Sleep(1000);
         }
     }
+    public void Honk1()
+    {
+        Console.WriteLine("\n!!! ALARM TRIGGERED !!!");
+        Console.WriteLine("BEEP! HONK!");
+        Thread.Sleep(1000);
+        
+    }
 }
 
 public class RemoteClicker
 {
     public bool IsArmed = false;
+    public bool Pressed = false;
 }
