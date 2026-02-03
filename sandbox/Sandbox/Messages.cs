@@ -10,6 +10,6 @@ public class Message
 
     public static void Display()
     {
-        Console.WriteLine("...");
+        Console.WriteLine();
     }
 }
