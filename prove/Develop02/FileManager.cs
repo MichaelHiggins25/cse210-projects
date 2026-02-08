@@ -1,19 +1,19 @@
 public class FileManager
 {
-    public void Save(string filename, Journal journal)
+    public void DoSave(string filename, Journal journal)
     {
         using StreamWriter writer = new StreamWriter(filename);
 
         foreach (Entry entry in journal.Entries)
         {
-            writer.WriteLine(entry.Date);
+            writer.WriteLine(entry.date);
             writer.WriteLine(entry.prompt);
             writer.WriteLine(entry.entrywrite);
             writer.WriteLine("--------------------------");
         }
     }
 
-    public void Load(string filename, Journal journal)
+    public void GetFile(string filename, Journal journal)
     {
         journal.Entries.Clear();
 
@@ -22,7 +22,7 @@ public class FileManager
         {
             Entry entry = new Entry
             {
-                Date = DateTime.Parse(lines[i]),
+                date = DateTime.Parse(lines[i]),
                 prompt = lines[i + 1],
                 entrywrite = lines[i + 2]
             };
