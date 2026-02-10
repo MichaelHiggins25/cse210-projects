@@ -67,7 +67,7 @@ class Program
 
         Entry entry = new Entry
         {
-            prompt = prompt,
+            _prompt = prompt,
             entrywrite = response,
             date = DateTime.Now
         };
