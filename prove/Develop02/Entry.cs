@@ -1,8 +1,8 @@
 public class Entry
 {
-    public string _prompt { get; set; }
-    public string entrywrite { get; set; }
-    public DateTime date { get; set; }
+    public string _prompt;
+    public string entrywrite;
+    public DateTime date;
 
     public override string ToString()
     {
