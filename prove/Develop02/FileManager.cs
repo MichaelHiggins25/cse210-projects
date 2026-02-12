@@ -6,9 +6,9 @@ public class FileManager
 
         foreach (Entry entry in journal.Entries)
         {
-            writer.WriteLine(entry.date);
-            writer.WriteLine(entry.prompt);
-            writer.WriteLine(entry.entrywrite);
+            writer.WriteLine(entry.Date);
+            writer.WriteLine(entry.Prompts);
+            writer.WriteLine(entry.EntryWrite);
             writer.WriteLine("--------------------------");
         }
     }
@@ -22,9 +22,9 @@ public class FileManager
         {
             Entry entry = new Entry
             {
-                date = DateTime.Parse(lines[i]),
-                prompt = lines[i + 1],
-                entrywrite = lines[i + 2]
+                Date = DateTime.Parse(lines[i]),
+                Prompts = lines[i + 1],
+                EntryWrite = lines[i + 2]
             };
 
             journal.WriteJournal(entry);

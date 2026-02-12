@@ -67,9 +67,9 @@ class Program
 
         Entry entry = new Entry
         {
-            _prompt = prompt,
-            entrywrite = response,
-            date = DateTime.Now
+            Prompts = prompt,
+            EntryWrite = response,
+            Date = DateTime.Now
         };
 
         journal.WriteJournal(entry);
