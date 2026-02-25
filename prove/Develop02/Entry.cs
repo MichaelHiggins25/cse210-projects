@@ -1,11 +1,11 @@
 public class Entry
 {
-    public string Prompts;
-    public string EntryWrite;
-    public DateTime Date;
+    public string _prompts;
+    public string _entryWrite;
+    public DateTime _date;
 
     public override string ToString()
     {
-        return $"{Date:d}\nPrompt: {Prompts}\n{EntryWrite}\n";
+        return $"{_date:d}\nPrompt: {_prompts}\n{_entryWrite}\n";
     }
 }
