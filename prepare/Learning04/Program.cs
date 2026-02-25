@@ -2,7 +2,10 @@ using System;
 
 class Program
 {
-    Assingment a1 = new Assingment();
+    static void Main(string[] args)
+    {
+    Assignment a1 = new Assignment("Spencer Fencent","Addition");
+    Console.WriteLine(a1.GetSummary());
     
-    
+    }
 }
