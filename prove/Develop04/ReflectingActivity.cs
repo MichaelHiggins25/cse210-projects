@@ -1,14 +1,15 @@
 class ReflectingActivity: Activity
 {
-    private string _countDown;
-    public ReflectingActivity(string name, string description, string countDown) : base (name, description)
+    private string _response;
+    public ReflectingActivity(string name, string description, string response) : base (name, description)
     {
         _name = name;
-        _countDown = countDown;
+        _response = response;
         _description = description;
     }
-    public string GetActivityB()
+
+    public string GetActivityResponse()
     {
-        return _countDown;
+        return $"{_response}";
     }
 }

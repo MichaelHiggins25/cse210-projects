@@ -1,16 +1,15 @@
 class ListeningActivity: Activity
 {
-    private string _response;
+    private int _countDown;
 
-    public ListeningActivity(string name, string description, string response) : base (name, description)
+    public ListeningActivity(string name, int countDown, string description) : base (name, description)
     {
         _name = name;
-        _response = response;
+        _countDown = countDown;
         _description = description;
     }
-
-    public string GetActivityB()
+    public string GetActivityTimer()
     {
-        return _response;
+        return $"{_countDown}";
     }
 }

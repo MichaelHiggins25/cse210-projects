@@ -2,7 +2,8 @@ class Activity
 {
     protected string _name;
     protected string _description;
-   private string _countDown;
+    private int _countDown;
+    private string _response;
 
     public Activity(string name, string description)
     {
@@ -10,10 +11,17 @@ class Activity
         _description = description;
     }
 
-    public Activity(string name, string description, string countDown)
+    public Activity(string name, string description, int countDown)
     {
         _name = name;
-        string _countDown = countDown;
+        _countDown = countDown;
+        _description = description;
+    }
+
+    public Activity(string name, string description, string response)
+    {
+        _name = name;
+        _response = response;
         _description = description;
     }
 

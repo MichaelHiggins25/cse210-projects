@@ -1,15 +1,15 @@
 class BreathingActivity: Activity
 {
-    private string _countDown;
+    private int _countDown;
 
-    public BreathingActivity(string name, string countDown, string description) : base (name, description)
+    public BreathingActivity(string name, int countDown, string description) : base (name, description)
     {
         _name = name;
         _countDown = countDown;
         _description = description;
     }
-    public string GetActivityB()
+    public string GetActivityTimer()
     {
-        return _countDown;
+        return $"{_countDown}";
     }
 }
