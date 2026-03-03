@@ -4,6 +4,10 @@ class Activity
     protected string _description;
     private int _countDown;
     private string _response;
+    public Activity (int countDown)
+    {
+        _countDown = countDown;
+    }
 
     public Activity(string name, string description)
     {

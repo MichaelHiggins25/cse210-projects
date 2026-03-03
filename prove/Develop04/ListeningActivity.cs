@@ -1,11 +1,13 @@
 class ListeningActivity: Activity
 {
     private int _countDown;
-
-    public ListeningActivity(string name, int countDown, string description) : base (name, description)
+    public ListeningActivity(int countDown) : base(countDown)
+    {
+        _countDown = countDown;        
+    }
+    public ListeningActivity(string name,string description): base (name, description)
     {
         _name = name;
-        _countDown = countDown;
         _description = description;
     }
     public string GetActivityTimer()
