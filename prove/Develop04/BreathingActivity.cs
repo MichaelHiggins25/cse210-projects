@@ -6,6 +6,7 @@ class BreathingActivity: Activity
     {
         _name = name;
         _description = description;
+        _countDown = 0;
     }
 
     public BreathingActivity(string name, int countDown, string description) : base (name, description)

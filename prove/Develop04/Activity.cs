@@ -1,9 +1,9 @@
 class Activity
 {
-    protected string _name;
-    protected string _description;
+    protected static string _name;
+    protected static string _description;
     private int _countDown;
-    private string _response;
+    protected string _response;
     public Activity (int countDown)
     {
         _countDown = countDown;
