@@ -3,16 +3,19 @@ class Activity
     protected static string _name;
     protected static string _description;
     private int _countDown;
-    protected string _response;
+    private string _response;
     public Activity (int countDown)
     {
         _countDown = countDown;
+        _name = "";
+        _description = "";
     }
 
     public Activity(string name, string description)
     {
         _name = name;
         _description = description;
+        _countDown = 0;
     }
 
     public Activity(string name, string description, int countDown)

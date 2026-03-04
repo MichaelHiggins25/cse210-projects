@@ -9,7 +9,7 @@ class BreathingActivity: Activity
         _countDown = 0;
     }
 
-    public BreathingActivity(string name, int countDown, string description) : base (name, description)
+    public BreathingActivity(string name, string description, int countDown) : base (name, description)
     {
         _name = name;
         _countDown = countDown;
@@ -18,5 +18,9 @@ class BreathingActivity: Activity
     public string GetActivityTimer()
     {
         return $"{_countDown}";
+    }
+    public string GetActivitySummary()
+    {
+        return $"{_name}: {_description}";
     }
 }

@@ -7,18 +7,16 @@ class Program
     public string arrowndash = $"-------------------------------→ {activity}------------------------------";
     static void Main(string[] args)
     {
-        BreathingActivity activity1 = new BreathingActivity("", "");
-        BreathingActivity activity2 = new BreathingActivity("", "");
+        BreathingActivity activity1 = new BreathingActivity("Deep Breaths", "breath in and out deeply until time is up.", 10);
+        ListeningActivity activity2 = new ListeningActivity("", "");
         ListeningActivity activity3 = new ListeningActivity("", "");
-        ReflectingActivity activity4 = new ReflectingActivity("","","");
 
+        ReflectingActivity activity4 = new ReflectingActivity("Reflecting on today","What was the most fun thing you did today?");
 
         Console.WriteLine(activity1);
         Console.WriteLine(activity2);
         Console.WriteLine(activity3);
         Console.WriteLine(activity4);
-
-
     }
 }
 

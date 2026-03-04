@@ -18,4 +18,8 @@ class ListeningActivity: Activity
     {
         return $"{_countDown}";
     }
+    public string GetActivitySummary()
+    {
+        return $"{_name}: {_description}";
+    }
 }
