@@ -1,15 +1,14 @@
 class BreathingActivity: Activity
 {
-    private int _countDown;
 
-    public BreathingActivity(string name, string description) : base (name, description)
+    public BreathingActivity(string name, string description) : base (_name, _description)
     {
         _name = name;
         _description = description;
         _countDown = 0;
     }
 
-    public BreathingActivity(string name, string description, int countDown) : base (name, description)
+    public BreathingActivity(string name, string description, int countDown) : base (_name, _description, _countDown)
     {
         _name = name;
         _countDown = countDown;

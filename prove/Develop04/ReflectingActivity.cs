@@ -1,14 +1,13 @@
 class ReflectingActivity: Activity
 {
-    private string _response;
-        public ReflectingActivity(string name, string description) : base (name, description)
+        public ReflectingActivity(string name, string description) : base (_name, _description)
     {
         _name = name;
         _response = "Please write a response";
         _description = description;
     }
 
-    public ReflectingActivity(string name, string description, string response) : base (name, description)
+    public ReflectingActivity(string name, string description, string response) : base (_name, _description, _response)
     {
         _name = name;
         _response = response;

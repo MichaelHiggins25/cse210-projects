@@ -1,14 +1,13 @@
-class ListeningActivity: Activity
+class ListingActivity: Activity
 {
-    private int _countDown;
-    public ListeningActivity(string name, string description): base (_name,_description)
+    public ListingActivity(string name, string description): base (_name,_description)
     {
         _name = name;
         _description = description;
         _countDown = 0;
 
     }
-    public ListeningActivity(string name, string description, int countDown): base (_name, _description)
+    public ListingActivity(string name, string description, int countDown): base (_name, _description, _countDown)
     {
         _name = name;
         _description = description;
