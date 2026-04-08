@@ -1,13 +1,13 @@
 abstract class Areas
 {
-    private string _namea;
-    private string _description;
+    public string _namea;
+    public string _description;
     private int _numOfLands;
     private int _numOfWaters;
     private int _numOfMontains;
     protected List<int> regions = new List<int>();
     protected List<int> areas = new List<int>();
-    public abstract void CreateRegions();
+    public abstract void CreateRegions(string name, string description);
     public void CreateArea(string region, string namea, string description, int numOfLands, int numOfWaters, int numOfMontains)
     {
         

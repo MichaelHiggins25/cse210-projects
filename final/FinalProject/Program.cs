@@ -4,9 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        LandRegions area1 = new LandRegions();
+        World world1 = new World();
 
         
-        Console.WriteLine(area1.GetArea());
+        Console.WriteLine(world1.GetWorld());
     }
 }
