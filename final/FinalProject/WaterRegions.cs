@@ -1,4 +1,4 @@
-class LandsRegions: Areas
+class WaterRegions
 {
     private new string _namea;  
     private new string _description;  
@@ -10,7 +10,7 @@ class LandsRegions: Areas
         _areasize = areasize;
     }
 
-    public string GetLandRegion()
+    public string GetWaterRegion()
     {
         return $"Here is the info of all your land regions. \n" + 
         $"Name: {_namea} \n" +
