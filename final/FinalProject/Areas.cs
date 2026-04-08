@@ -1,22 +1,27 @@
 class Areas
 {
-    protected string _namea;
-    protected string _description;
+    protected static string _namea;
+    protected static string _description;
     private int _numOfLands;
     private int _numOfWaters;
     private int _numOfMontains;
-    protected int _areasize;
     protected List<int> regions = new List<int>();
     protected List<int> areas = new List<int>();
-
-    public void CreateArea(string region, string namea, string description, int numOfLands, int numOfWaters, int numOfMontains, int areasize) 
+    public Areas (string namea, string description) 
+    {
+        _namea = namea;
+        _description = description;
+        _numOfLands = 0;
+        _numOfWaters = 0;
+        _numOfMontains = 0;
+    }
+    public Areas (string region, string namea, string description, int numOfLands, int numOfWaters, int numOfMontains) 
     {
         _namea = namea;
         _description = description;
         _numOfLands = numOfLands;
         _numOfWaters = numOfWaters;
         _numOfMontains = numOfMontains;
-        _areasize = areasize;
     }
     public string GetArea ()
     {

@@ -1,9 +1,8 @@
-class LandsRegions: Areas
+class LandRegions: Areas
 {
-    private new string _namea;  
-    private new string _description;  
-    private new string _areasize;
-    public void LandRegions(string name, string description,string areasize)
+    private string _areasize;
+    public LandRegions (string name, string description,string areasize)
+        : base (name, description)
     {
         _namea = name;
         _description = description;

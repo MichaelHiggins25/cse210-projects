@@ -1,13 +1,10 @@
-class WaterRegions
+class WaterRegions: Areas
 {
-    private new string _namea;  
-    private new string _description;  
-    private new string _areasize;
-    public void LandRegions(string name, string description,string areasize)
+    private int _numrivers;
+    public WaterRegions(string name, string description, int numrivers) 
+        : base (name, description)
     {
-        _namea = name;
-        _description = description;
-        _areasize = areasize;
+        _numrivers = numrivers;
     }
 
     public string GetWaterRegion()
@@ -15,6 +12,6 @@ class WaterRegions
         return $"Here is the info of all your land regions. \n" + 
         $"Name: {_namea} \n" +
         $"Description: {_description} \n" +
-        $"The size of the area: {_areasize} \n" ;
+        $"The size of the area: {_numrivers} \n" ;
     }
 }

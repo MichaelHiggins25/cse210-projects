@@ -1,13 +1,11 @@
-class MontainsRegions
+class MontainRegions: Areas
 {
-    private new string _namea;  
-    private new string _description;  
-    private new string _areasize;
-    public void LandRegions(string name, string description,string areasize)
+    private string _rangesHeightTo; //lowest mountain
+    private string _rangesHeightFrom; // tallest mountain
+    public MontainRegions(string name, string description, int rangesHeightTo, int rangesHeightFrom) : base(name,description)
     {
         _namea = name;
         _description = description;
-        _areasize = areasize;
     }
 
     public string GetMountainRegion()
@@ -15,6 +13,6 @@ class MontainsRegions
         return $"Here is the info of all your land regions. \n" + 
         $"Name: {_namea} \n" +
         $"Description: {_description} \n" +
-        $"The size of the area: {_areasize} \n" ;
+        $"The mountain ranges height is from {_rangesHeightFrom} to {_rangesHeightTo} \n" ;
     }
 }
