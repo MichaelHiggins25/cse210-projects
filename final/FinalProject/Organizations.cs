@@ -13,6 +13,27 @@ class Organizations
         _index = index;
     }
 
+    public Organizations(string people, string description)
+    {
+        _people = people;
+        _description = description;
+        _index = 0;
+    }
+
+    public Organizations(string people)
+    {
+        _people = people;
+        _description = "na";
+        _index = 0;
+    }
+
+    public Organizations(string description, int index)
+    {
+        _people = "na";
+        _description = description;
+        _index = index;
+    }
+    
     public string GetOrganization()
     {
         return "Here is the info on your organizations/company: \n" +

@@ -1,13 +1,23 @@
-class MontainRegions: Areas
+class MountainRegions: Areas
 {
-    private string _rangesHeightTo; //lowest mountain
-    private string _rangesHeightFrom; // tallest mountain
-    public MontainRegions(string name, string description, int rangesHeightTo, int rangesHeightFrom) : base(name,description)
+    private int _rangesHeightTo; //lowest mountain
+    private int _rangesHeightFrom; // tallest mountain
+    public MountainRegions(string name, string description, int rangesHeightTo, int rangesHeightFrom) : base(name,description)
     {
         _namea = name;
         _description = description;
+        _rangesHeightTo = rangesHeightTo;
+        _rangesHeightFrom = rangesHeightFrom;
     }
 
+    public MountainRegions (string name, int rangesHeightTo, int rangesHeightFrom)
+        : base (name)
+    {
+        _namea = name;
+        _description = "na";
+        _rangesHeightTo = rangesHeightTo;
+        _rangesHeightFrom = rangesHeightFrom;
+    }
     public string GetMountainRegion()
     {
         return $"Here is the info of all your land regions. \n" + 

@@ -27,11 +27,11 @@ class Areas
         _numOfWaters = 0;
         _numOfMontains = 0;
     }
-            public Areas (string namea, string description, int index, int numOfLands, int numOfWaters, int numOfMontains) 
+    public Areas (string description, int index, int numOfLands, int numOfWaters, int numOfMontains) 
     {
-        _namea = namea;
-        _index = index;
         _description = description;
+        _index = index;
+        _description = "na";
         _numOfLands = numOfLands;
         _numOfWaters = numOfWaters;
         _numOfMontains = numOfMontains;
@@ -45,6 +45,10 @@ class Areas
         _numOfLands = numOfLands;
         _numOfWaters = numOfWaters;
         _numOfMontains = numOfMontains;
+    }
+    public Areas (string namea)
+    {
+        _namea = namea;
     }
     public string GetArea ()
     {

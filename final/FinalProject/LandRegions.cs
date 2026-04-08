@@ -9,6 +9,13 @@ class LandRegions: Areas
         _description = description;
         _areasize = areasize;
     }
+    public LandRegions (string name, string areasize)
+        : base (name)
+    {
+        _namea = name;
+        _description = "na";
+        _areasize = areasize;
+    }
 
     public string GetLandRegion()
     {

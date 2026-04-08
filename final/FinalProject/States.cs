@@ -13,6 +13,27 @@ class States
         _index = index;
     }
 
+    public States(string people, string description)
+    {
+        _people = people;
+        _description = description;
+        _index = 0;
+    }
+
+    public States(string people)
+    {
+        _people = people;
+        _description = "na";
+        _index = 0;
+    }
+
+    public States(string description, int index)
+    {
+        _people = "na";
+        _description = description;
+        _index = index;
+    }
+    
     public string GetStates()
     {
         return "Here is the info on your organizations/company: \n" +

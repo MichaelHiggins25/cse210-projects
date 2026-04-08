@@ -22,6 +22,28 @@ class Characters
         _relations = relations;
     }
 
+    public Characters(string name,string backgroundDetails,string sex, string hairColor,string bodyBuild,string relations)
+    {
+        _name = name;
+        _backgroundDetails = backgroundDetails;
+        _sex = sex;
+        _hight = 0;        
+        _weight = 0;
+        _hairColor = hairColor;
+        _bodyBuild = bodyBuild;
+        _relations = relations;
+    }
+        public Characters(string name,string backgroundDetails, int hight, int weight, string hairColor,string bodyBuild,string relations)
+    {
+        _name = name;
+        _backgroundDetails = backgroundDetails;
+        _sex = "na";
+        _hight = hight;        
+        _weight = weight;
+        _hairColor = hairColor;
+        _bodyBuild = bodyBuild;
+        _relations = relations;
+    }
     public string GetCharacters()
     {
         return $"Here is the info of all of your Characters \n" +
