@@ -1,4 +1,4 @@
-class Areas
+abstract class Areas
 {
     private string _region;
     private string _namea;
@@ -7,7 +7,7 @@ class Areas
     private int _numOfWaters;
     private int _numOfMontains;
     protected List<int> regions = new List<int>();
-
+    public abstract void CreateRegions();
     public void CreateArea(string region, string namea, string decription, int numOfLand, int numOfWater, int numOfMontains)
     {
         
