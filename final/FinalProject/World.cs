@@ -19,6 +19,10 @@ class World
 
     public string GetWorld()
     {
-        return $"Here is a list of the thing in your World /n States: {_states} /n Organizations: {_organizations} /n Regions: {_inregion} /n Areas: {_inarea}" ;
+        return $"Here is a list of the things in your World. /n" + 
+        $"States: {_states} \n" +
+        $"Organizations: {_organizations} \n" + 
+        $"Regions: {_inregion} \n" +
+        $"Areas: {_inarea}" ;
     }
 }
