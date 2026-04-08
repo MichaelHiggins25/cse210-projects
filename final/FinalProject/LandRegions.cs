@@ -1,9 +1,13 @@
 class LandsRegions: Areas
 {
-    public override void CreateRegions(string name, string description, string _areasize): base(_namea, _description)
+    private new string _namea;  
+    private new string _description;  
+    private new string _areasize;
+    public void LandRegions(string name, string description,string areasize)
     {
         _namea = name;
         _description = description;
+        _areasize = areasize;
     }
-    Get
+    
 }

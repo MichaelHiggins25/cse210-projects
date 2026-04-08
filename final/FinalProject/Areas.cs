@@ -1,16 +1,21 @@
-abstract class Areas
+class Areas
 {
-    public string _namea;
-    public string _description;
+    protected string _namea;
+    protected string _description;
     private int _numOfLands;
     private int _numOfWaters;
     private int _numOfMontains;
+    protected string _areasize;
     protected List<int> regions = new List<int>();
     protected List<int> areas = new List<int>();
-    public abstract void CreateRegions(string name, string description);
-    public void CreateArea(string region, string namea, string description, int numOfLands, int numOfWaters, int numOfMontains)
+
+    public void CreateArea(string region, string namea, string description, int numOfLands, int numOfWaters, int numOfMontains) 
     {
-        
+        _namea = namea;
+        _description = description;
+        _numOfLands = numOfLands;
+        _numOfWaters = numOfWaters;
+        _numOfMontains = numOfMontains;
     }
     public string GetArea ()
     {
