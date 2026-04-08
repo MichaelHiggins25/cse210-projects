@@ -1,6 +1,7 @@
 class LandRegions: Areas
 {
     private string _areasize;
+    
     public LandRegions (string name, string description,string areasize)
         : base (name, description)
     {
