@@ -13,11 +13,30 @@ class Areas
     {
         _namea = namea;
         _description = description;
+        _index = 0;
         _numOfLands = 0;
         _numOfWaters = 0;
         _numOfMontains = 0;
     }
-    public Areas (string region, int index, string namea, string description, int numOfLands, int numOfWaters, int numOfMontains) 
+        public Areas (string namea, string description, int index) 
+    {
+        _namea = namea;
+        _index = index;
+        _description = description;
+        _numOfLands = 0;
+        _numOfWaters = 0;
+        _numOfMontains = 0;
+    }
+            public Areas (string namea, string description, int index, int numOfLands, int numOfWaters, int numOfMontains) 
+    {
+        _namea = namea;
+        _index = index;
+        _description = description;
+        _numOfLands = numOfLands;
+        _numOfWaters = numOfWaters;
+        _numOfMontains = numOfMontains;
+    }
+    public Areas (string namea, int index, string description, int numOfLands, int numOfWaters, int numOfMontains) 
     {
         _namea = namea;
         _index = index;
