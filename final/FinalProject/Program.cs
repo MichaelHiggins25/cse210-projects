@@ -6,9 +6,8 @@ class Program
     {
         World world1 = new World();
         Areas area1 = new Areas();
-
-        Console.WriteLine(world1);
+        area1.GetArea();
+        
         Console.WriteLine(area1);
-        Console.WriteLine("");
     }
 }

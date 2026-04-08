@@ -8,7 +8,7 @@ class Areas
     private int _numOfMontains;
     protected List<int> regions = new List<int>();
 
-    public void CreateArea(string region, string namea, string decription, string numOfLand, string numOfWater, string numOfMontains)
+    public void CreateArea(string region, string namea, string decription, int numOfLand, int numOfWater, int numOfMontains)
     {
         
     }
