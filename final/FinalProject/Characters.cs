@@ -10,7 +10,7 @@ class Characters
     private string _bodyBuild;
     private string _relations;
     
-    public void CreateCharacters(string name,string backgroundDetails,string sex,int hight, int weight,string hairColor,string bodyBuild,string relations)
+    public Characters(string name,string backgroundDetails,string sex,int hight, int weight,string hairColor,string bodyBuild,string relations)
     {
         _name = name;
         _backgroundDetails = backgroundDetails;
@@ -26,12 +26,12 @@ class Characters
     {
         return $"Here is the info of all of your Characters \n" +
         $"Name: {_name} \n" +
-        $"Background: \n" + 
-        $"Relations: \n" + 
+        $"Background: {_backgroundDetails} \n" + 
+        $"Relations: {_relations} \n" + 
         $"Sex: {_sex} \n" + 
         $"Hight: {_hight} \n" + 
         $"Weight: {_weight} \n" + 
-        $"Hair Color: {_bodyBuild} \n" +
-        $"Body Build: {_relations} \n";
+        $"Hair Color: {_hairColor} \n" +
+        $"Body Build: {_bodyBuild} \n";
     }
 }
