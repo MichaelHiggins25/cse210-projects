@@ -18,17 +18,18 @@ class Program
         World world1 = new World();
         do //Beeeeg loop!
         {
-        if (_userchoice != "5")
+        if (_userchoice != "")
         { 
             Console.WriteLine("Hello and welcome to The World Building Sandbox \n" + 
-            "1. Areas" +
-            "2. States" +
-            "3. Organizations" +
-            "4. Characters" +
-            "5. Exit" +
-            "A new world has been made." +
+            "1. Areas \n" +
+            "2. States \n" +
+            "3. Organizations \n" +
+            "4. Characters \n" +
+            "5. Exit \n" +
+            "A new world has been made. \n" +
             "Please chose a part of your world to build ... "
             );
+            _userchoice = Console.ReadLine();
         }
         else
         {
@@ -102,7 +103,7 @@ class Program
                 break;
 
             case "6": // Exits the whole program.
-                Environment.Exit(0);
+                //Environment.Exit(0);
                 break;
 
             default: // Exits this loop.
