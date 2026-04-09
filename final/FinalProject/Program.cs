@@ -12,12 +12,14 @@ class Program
     private static int _userentry7;
     private static int _userentry8;
     private static int _userentry9;
-    private static int _userentry10;
+    private static int _userentry10 = 0;
     private static bool _running = true;
     private static string _stop = "yes";
     static void Main(string[] args)
     {
         World world1 = new World();
+        List<World> worlds = new List<World>();
+        worlds.Add(world1);
         while (_running == true)  //Beeeeg loop!
         {
             Console.Clear();
@@ -67,7 +69,7 @@ class Program
                             case "grass":
                             Console.WriteLine("Ok. First enter the name of the area.");
                             _userentry1 = Console.ReadLine();
-                            Console.WriteLine("Then enter in the description of the area.");
+                            Console.WriteLine("Then enter in the description of the region.");
                             _userentry2 = Console.ReadLine();
                             Console.WriteLine("Then enter in the size of the region (in m/sqft) and your done.");
                             _userentry6 = int.Parse(Console.ReadLine());
@@ -78,9 +80,9 @@ class Program
                             case "water":
                             Console.WriteLine("Ok. First enter the name of the area.");
                             _userentry1 = Console.ReadLine();
-                            Console.WriteLine("Then enter in the description of the area.");
+                            Console.WriteLine("Then enter in the description of the region.");
                             _userentry2 = Console.ReadLine();
-                            Console.WriteLine("");
+                            Console.WriteLine("Then enter the number of rivers off shotting streams (if there are any).");
                             _userentry6 = int.Parse(Console.ReadLine());
                             Console.WriteLine("Then enter in the size of the region (in m/sqft) and your done.");
                             _userentry7 = int.Parse(Console.ReadLine());
@@ -91,7 +93,7 @@ class Program
                             case "mountains":
                             Console.WriteLine("Ok. First enter the name of the area.");
                             _userentry1 = Console.ReadLine();
-                            Console.WriteLine("Then enter in the description of the area.");
+                            Console.WriteLine("Then enter in the description of the region.");
                             _userentry2 = Console.ReadLine();
                             Console.WriteLine("");
                             _userentry7 = int.Parse(Console.ReadLine());
@@ -108,13 +110,13 @@ class Program
                     {
                         Console.WriteLine("Ok. First enter the name of the state.");
                         _userentry1 = Console.ReadLine();
-                        Console.WriteLine("Then enter in the description of the area.");
+                        Console.WriteLine("Then enter in the description of the state.");
                         _userentry2 = Console.ReadLine();
                         Console.WriteLine("Then enter in the idexing number and your done.");
                         _userentry6 = int.Parse(Console.ReadLine());
                         Console.WriteLine("Your state has been put into place on your world");
                         States states1 = new States(_userentry1, _userentry2, _userentry6);
-                        Console.WriteLine("Would you like to continue making areas? (yes/no)");
+                        Console.WriteLine("Would you like to continue making states? (yes/no)");
                         _stop = Console.ReadLine();
                     }
                     break;
@@ -124,13 +126,13 @@ class Program
                     {
                         Console.WriteLine("Ok. First enter the name of the organization.");
                         _userentry1 = Console.ReadLine();
-                        Console.WriteLine("Then enter in the description of the area.");
+                        Console.WriteLine("Then enter in the description of the organization.");
                         _userentry2 = Console.ReadLine();
                         Console.WriteLine("Then enter in the idexing number and your done.");
                         _userentry6 = int.Parse(Console.ReadLine());
                         Console.WriteLine("Your organiztion has been placed into your world.");
                         Organizations organization1 = new Organizations(_userentry1, _userentry2, _userentry6);
-                        Console.WriteLine("Would you like to continue making areas? (yes/no) ");
+                        Console.WriteLine("Would you like to continue making organizations? (yes/no) ");
                         _stop = Console.ReadLine();
                         Console.Clear();
                     }
@@ -155,14 +157,14 @@ class Program
                         _userentry5 = Console.ReadLine();
                         Console.WriteLine("Your character has been placed into your world.");
                         Characters characters1 = new Characters(_userentry1, _userentry2, _userentry6, _userentry7, _userentry3, _userentry4, _userentry5);
-                        Console.WriteLine("Would you like to continue making areas? (yes/no)");
+                        Console.WriteLine("Would you like to continue making characters? (yes/no)");
                         _stop = Console.ReadLine();
                         Console.Clear();
                     }
                     break;
 
                 case "5": // Will show all info from each class.
-                    Console.Write(world1);
+                    Console.WriteLine(world1.GetWorld());
                     break;
 
                 case "6": // Exits the whole program.

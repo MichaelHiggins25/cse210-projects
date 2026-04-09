@@ -1,4 +1,4 @@
-class Areas
+class Areas: Program 
 {
     protected static string _namea;
     protected static string _description;

@@ -3,8 +3,8 @@ class Organizations: World
     private new string _people;
     private string _description;
     protected int _index;
-    private List<string> peopleInIt = new List<string>();
-    private List<string> organizationl = new List<string>();
+    public List<string> peopleInIt = new List<string>();
+    public List<string> organizationl = new List<string>();
     public Organizations()
     {
         _people = "";

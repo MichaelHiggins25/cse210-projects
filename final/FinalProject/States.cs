@@ -3,8 +3,8 @@ class States: World
     private new string _people;
     private int _index;
     private string _description;
-    private List<string> peopleInIt = new List<string>();
-    private List<string> statesl = new List<string>();
+    public List<string> peopleInIt = new List<string>();
+    public List<string> states = new List<string>();
     public States()
     {
         _people = "";
@@ -42,7 +42,7 @@ class States: World
     public string GetStates()
     {
         return "Here is the info on your organizations/company: \n" +
-        $"Name of organization/companies: {string.Join("\n", statesl)} \n" + 
+        $"Name of organization/companies: {string.Join("\n", states)} \n" + 
         $"People from these organizations/companies: {string.Join("\n", peopleInIt)}\n";
     }
 }

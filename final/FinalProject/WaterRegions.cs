@@ -1,6 +1,7 @@
 class WaterRegions: Areas
 {
     private int _numrivers;
+    public List<string> wregion = new List<string>();
     //private new int _regsize;
     public WaterRegions(string name, string description, int numrivers, int regsize) 
         : base (name, description, regsize)

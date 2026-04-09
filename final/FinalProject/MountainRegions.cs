@@ -1,7 +1,8 @@
 class MountainRegions: Areas
 {
-    private int _rangesHeightTo; // lowest mountain
-    private int _rangesHeightFrom; // tallest mountain
+    public int _rangesHeightTo; // lowest mountain
+    public int _rangesHeightFrom; // tallest mountain
+    public List<string> wregion = new List<string>();
     public MountainRegions(string name, string description, int rangesHeightTo, int rangesHeightFrom)
     {
         _namea = name;

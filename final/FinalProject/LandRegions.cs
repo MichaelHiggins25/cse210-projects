@@ -1,6 +1,6 @@
-class LandRegions: Areas
+class LandRegions: Areas //also known as grassland or plains
 {
-    private int regsize;
+    //private int regsize;
     public LandRegions (string name, string description, int regsize) 
         : base (name, description, regsize)
     {
