@@ -10,8 +10,9 @@ class Program
     private static string _userentry5;
     private static int _userentry6;
     private static int _userentry7;
-    private static int _userentry8 = 0;
+    private static int _userentry8;
     private static int _userentry9;
+    private static int _userentry10;
     private static bool _running = true;
     private static string _stop = "yes";
     static void Main(string[] args)
@@ -43,14 +44,14 @@ class Program
                     {
                         while (_stop == "yes")
                         {
-                            Console.WriteLine("Ok. First enter the name of the area. ");
+                            Console.WriteLine("Ok. First enter the name of the area.");
                             _userentry1 = Console.ReadLine();
-                            Console.WriteLine("Then enter in the description of the area. ");
+                            Console.WriteLine("Then enter in the description of the area.");
                             _userentry2 = Console.ReadLine();
-                            Console.WriteLine("Then enter in the idexing number and your done. ");
+                            Console.WriteLine("Then enter in the idexing number and your done.");
                             _userentry9 = int.Parse(Console.ReadLine());
                             Console.WriteLine("Your area has been put into place on your world.");
-                            Areas area1 = new Areas(_userentry1, _userentry2, _userentry6, _userentry7, _userentry8, _userentry9);
+                            Areas area1 = new Areas(_userentry1, _userentry2, _userentry6, _userentry7, _userentry8, _userentry9, _userentry10);
                             // ints in this object are just stand-ins (except #9). The math is done in the method thats in their class.
                             Console.WriteLine("Would you like to continue making areas? (yes/no) ");
                             _stop = Console.ReadLine();
@@ -64,20 +65,40 @@ class Program
                         switch (_userchoice)
                             {
                             case "grass":
-                            Console.WriteLine("Ok. First enter the name of the area. ");
+                            Console.WriteLine("Ok. First enter the name of the area.");
                             _userentry1 = Console.ReadLine();
-                            Console.WriteLine("Then enter in the description of the area. ");
+                            Console.WriteLine("Then enter in the description of the area.");
                             _userentry2 = Console.ReadLine();
-                            Console.WriteLine("Then enter in the size of the region (in m/sqft) and your done. ");
-                            _userentry3 = Console.ReadLine();
+                            Console.WriteLine("Then enter in the size of the region (in m/sqft) and your done.");
+                            _userentry6 = int.Parse(Console.ReadLine());
                             Console.WriteLine("Your area has been put into place on your world.");
-                            LandRegions area1 = new LandRegions(_userentry1, _userentry2, _userentry3);
+                            LandRegions region1 = new LandRegions(_userentry1, _userentry2, _userentry6);
                             break;
-                            case "water":
-                            
-                            break;
-                            case "mountains":
 
+                            case "water":
+                            Console.WriteLine("Ok. First enter the name of the area.");
+                            _userentry1 = Console.ReadLine();
+                            Console.WriteLine("Then enter in the description of the area.");
+                            _userentry2 = Console.ReadLine();
+                            Console.WriteLine("");
+                            _userentry6 = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Then enter in the size of the region (in m/sqft) and your done.");
+                            _userentry7 = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Your area has been put into place on your world.");
+                            WaterRegions region2 = new WaterRegions(_userentry1, _userentry2, _userentry6, _userentry7);
+                            break;
+
+                            case "mountains":
+                            Console.WriteLine("Ok. First enter the name of the area.");
+                            _userentry1 = Console.ReadLine();
+                            Console.WriteLine("Then enter in the description of the area.");
+                            _userentry2 = Console.ReadLine();
+                            Console.WriteLine("");
+                            _userentry7 = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Then enter in the size of the region (in m/sqft) and your done.");
+                            _userentry8 = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Your area has been put into place on your world.");
+                            MountainRegions region3 = new MountainRegions(_userentry1, _userentry2, _userentry7, _userentry8);
                             break;
                             }
                     }
@@ -85,15 +106,15 @@ class Program
                 case "2": //Makes a States object.
                     while (_stop == "yes")
                     {
-                        Console.WriteLine("Ok. First enter the name of the state. ");
+                        Console.WriteLine("Ok. First enter the name of the state.");
                         _userentry1 = Console.ReadLine();
-                        Console.WriteLine("Then enter in the description of the area. ");
+                        Console.WriteLine("Then enter in the description of the area.");
                         _userentry2 = Console.ReadLine();
-                        Console.WriteLine("Then enter in the idexing number and your done. ");
+                        Console.WriteLine("Then enter in the idexing number and your done.");
                         _userentry6 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Your state has been put into place on your world.");
+                        Console.WriteLine("Your state has been put into place on your world");
                         States states1 = new States(_userentry1, _userentry2, _userentry6);
-                        Console.WriteLine("Would you like to continue making areas? (yes/no) ");
+                        Console.WriteLine("Would you like to continue making areas? (yes/no)");
                         _stop = Console.ReadLine();
                     }
                     break;
@@ -101,9 +122,9 @@ class Program
                 case "3": // Makes an Organization object.
                     while (_stop == "yes")
                     {
-                        Console.WriteLine("Ok. First enter the name of the organization. ");
+                        Console.WriteLine("Ok. First enter the name of the organization.");
                         _userentry1 = Console.ReadLine();
-                        Console.WriteLine("Then enter in the description of the area. ");
+                        Console.WriteLine("Then enter in the description of the area.");
                         _userentry2 = Console.ReadLine();
                         Console.WriteLine("Then enter in the idexing number and your done.");
                         _userentry6 = int.Parse(Console.ReadLine());
@@ -118,7 +139,7 @@ class Program
                 case "4": // Make a Character object.
                     while (_stop == "yes")
                     {
-                        Console.WriteLine("Ok. First enter the name of your person. ");
+                        Console.WriteLine("Ok. First enter the name of your person.");
                         _userentry1 = Console.ReadLine();
                         Console.WriteLine("Then enter in backstory for this person.");
                         _userentry2 = Console.ReadLine();
@@ -134,7 +155,7 @@ class Program
                         _userentry5 = Console.ReadLine();
                         Console.WriteLine("Your character has been placed into your world.");
                         Characters characters1 = new Characters(_userentry1, _userentry2, _userentry6, _userentry7, _userentry3, _userentry4, _userentry5);
-                        Console.WriteLine("Would you like to continue making areas? (yes/no) ");
+                        Console.WriteLine("Would you like to continue making areas? (yes/no)");
                         _stop = Console.ReadLine();
                         Console.Clear();
                     }
