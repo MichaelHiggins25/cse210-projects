@@ -7,6 +7,7 @@ class World
     private string _organizations;
     protected string _states;
     protected string _people;
+    public int _index;
     public World()
         {
             _states = "";

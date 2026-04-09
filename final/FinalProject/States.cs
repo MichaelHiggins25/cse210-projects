@@ -5,7 +5,12 @@ class States: World
     private string _description;
     private List<string> peopleInIt = new List<string>();
     private List<string> statesl = new List<string>();
-
+    public States()
+    {
+        _people = "";
+        _description = "";
+        _index = 0;
+    }
         public States(string people, string description,int index)
     {
         _people = people;

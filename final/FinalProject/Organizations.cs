@@ -2,11 +2,16 @@ class Organizations: World
 {
     private new string _people;
     private string _description;
-    private int _index;
     private List<string> peopleInIt = new List<string>();
     private List<string> organizationl = new List<string>();
+    public Organizations()
+    {
+        _people = "";
+        _description = "";
+        _index = 0;
+    }
 
-    public Organizations(string people, string description,int index)
+    public Organizations(string people, string description, int index)
     {
         _people = people;
         _description = description;
