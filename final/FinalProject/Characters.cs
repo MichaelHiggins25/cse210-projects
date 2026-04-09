@@ -10,6 +10,17 @@ class Characters
     private string _bodyBuild;
     private string _relations;
     
+    public Characters()
+    {
+        _name = "";
+        _backgroundDetails = "";
+        _sex = "na";
+        _hight = 0;        
+        _weight = 0;
+        _hairColor = "na";
+        _bodyBuild = "na";
+        _relations = "na";
+    }
     public Characters(string name,string backgroundDetails,string sex,int hight, int weight,string hairColor,string bodyBuild,string relations)
     {
         _name = name;

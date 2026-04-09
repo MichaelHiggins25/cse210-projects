@@ -7,8 +7,33 @@ class World
     private string _organizations;
     protected string _states;
     protected string _people;
+    public World()
+        {
+            _states = "";
+            _people = "";
+            _organizations = "";
+            _inregion = "";
+            _inarea = "";
+        }
+        public World(string states, string organization, string inregion)
+    {
+        _states = states;
+        _people = "";
+        _organizations = organization;
+        _inregion = inregion;
+        _inarea = "";
+    }
 
-    public void CreateWorld(string states, string people, string organization, string inregion, string inarea)
+        public World(string states, string people, string organization, string inregion)
+    {
+        _states = states;
+        _people = people;
+        _organizations = organization;
+        _inregion = inregion;
+        _inarea = "";
+    }
+
+    public World(string states, string people, string organization, string inregion, string inarea)
     {
         _states = states;
         _people = people;

@@ -1,6 +1,6 @@
-class States
+class States: World
 {
-    private string _people;
+    private new string _people;
     private int _index;
     private string _description;
     private List<string> peopleInIt = new List<string>();
@@ -33,7 +33,7 @@ class States
         _description = description;
         _index = index;
     }
-    
+
     public string GetStates()
     {
         return "Here is the info on your organizations/company: \n" +

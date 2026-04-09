@@ -46,7 +46,27 @@ class Areas
         _numOfWaters = numOfWaters;
         _numOfMontains = numOfMontains;
     }
-    public Areas (string namea)
+    public Areas (string namea, int index)
+    {
+        _namea = namea;
+        _index = 0;
+        _region = regions[index];
+        _description = "";
+        _numOfLands += 0;
+        _numOfWaters += 0;
+        _numOfMontains += 0;
+    }
+        public Areas (int index)
+    {
+        _namea = "";
+        _index = 0;
+        _region = regions[index];
+        _description = "";
+        _numOfLands += 0;
+        _numOfWaters += 0;
+        _numOfMontains += 0;
+    }
+        public Areas (string namea)
     {
         _namea = namea;
     }

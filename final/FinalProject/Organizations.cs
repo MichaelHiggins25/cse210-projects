@@ -1,6 +1,6 @@
-class Organizations
+class Organizations: World
 {
-    private string _people;
+    private new string _people;
     private string _description;
     private int _index;
     private List<string> peopleInIt = new List<string>();
