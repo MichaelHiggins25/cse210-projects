@@ -1,10 +1,14 @@
 class WaterRegions: Areas
 {
     private int _numrivers;
-    public WaterRegions(string name, string description, int numrivers) 
-        : base (name, description)
+    //private new int _regsize;
+    public WaterRegions(string name, string description, int numrivers, int regsize) 
+        : base (name, description, regsize)
     {
+        _namea = name; 
+        _description = description;
         _numrivers = numrivers;
+        _regsize = regsize;
     }
 
     public string GetWaterRegion()

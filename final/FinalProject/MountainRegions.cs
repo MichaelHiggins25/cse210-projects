@@ -2,7 +2,7 @@ class MountainRegions: Areas
 {
     private int _rangesHeightTo; // lowest mountain
     private int _rangesHeightFrom; // tallest mountain
-    public MountainRegions(string name, string description, int rangesHeightTo, int rangesHeightFrom) : base(name,description)
+    public MountainRegions(string name, string description, int rangesHeightTo, int rangesHeightFrom)
     {
         _namea = name;
         _description = description;
@@ -11,7 +11,7 @@ class MountainRegions: Areas
     }
 
     public MountainRegions (string name, int rangesHeightTo, int rangesHeightFrom)
-        : base (name)
+        : base (_namea)
     {
         _namea = name;
         _description = "na";

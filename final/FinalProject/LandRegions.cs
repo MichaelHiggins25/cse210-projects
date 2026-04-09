@@ -1,20 +1,20 @@
 class LandRegions: Areas
 {
-    private string _areasize;
-    
-    public LandRegions (string name, string description,string areasize)
-        : base (name, description)
+    private int regsize;
+    public LandRegions (string name, string description, int regsize) 
+        : base (name, description, regsize)
     {
         _namea = name;
         _description = description;
-        _areasize = areasize;
+        _regsize = regsize;
     }
-    public LandRegions (string name, string areasize)
+    public LandRegions (string name) 
         : base (name)
     {
         _namea = name;
         _description = "na";
-        _areasize = areasize;
+        _regsize = 0;
+        
     }
 
     public string GetLandRegion()
@@ -22,6 +22,6 @@ class LandRegions: Areas
         return $"Here is the info of all your land regions. \n" + 
         $"Name: {_namea} \n" +
         $"Description: {_description} \n" +
-        $"The size of the area: {_areasize} \n" ;
+        $"The size of the area: {_regsize} \n" ;
     }
 }
