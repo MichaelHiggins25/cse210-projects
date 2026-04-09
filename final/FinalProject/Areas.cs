@@ -18,6 +18,15 @@ class Areas
         _numOfWaters = 0;
         _numOfMontains = 0;
     }
+        public Areas (string namea, int index, string description) 
+    {
+        _namea = namea;
+        _index = index;
+        _description = description;
+        _numOfLands = 0;
+        _numOfWaters = 0;
+        _numOfMontains = 0;
+    }
         public Areas (string namea, string description, int index) 
     {
         _namea = namea;
