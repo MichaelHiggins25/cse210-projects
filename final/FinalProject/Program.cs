@@ -15,14 +15,24 @@ class Program
     private static int _userentry10 = 0;
     private static bool _running = true;
     private static string _stop = "yes";
+    public static List <string> printer = new List<string>();
     static void Main(string[] args)
     {
         World world1 = new World();
         List<World> worlds = new List<World>();
         worlds.Add(world1);
+        States states = new States();
+        Areas areas = new Areas();
+        LandRegions lands = new LandRegions();
+        WaterRegions waters = new WaterRegions();
+        MountainRegions mountains = new MountainRegions();
+        Characters characters = new Characters();
+        Organizations organizations = new Organizations();
+
+        Console.Clear();
         while (_running == true)  //Beeeeg loop!
         {
-            Console.Clear();
+            
             Console.WriteLine("Hello and welcome to The World Building Sandbox \n" +
             "1. Areas \n" +
             "2. States \n" +
@@ -53,8 +63,8 @@ class Program
                             Console.WriteLine("Then enter in the idexing number and your done.");
                             _userentry9 = int.Parse(Console.ReadLine());
                             Console.WriteLine("Your area has been put into place on your world.");
-                            Areas area1 = new Areas(_userentry1, _userentry2, _userentry6, _userentry7, _userentry8, _userentry9, _userentry10);
-                            // ints in this object are just stand-ins (except #9). The math is done in the method thats in their class.
+                            Areas areas1 = new Areas(_userentry1, _userentry2, _userentry6, _userentry7, _userentry8, _userentry9, _userentry10);
+                            areas.areasl.Add($"{areas1}");
                             Console.WriteLine("Would you like to continue making areas? (yes/no) ");
                             _stop = Console.ReadLine();
                             Console.Clear();
@@ -75,6 +85,7 @@ class Program
                             _userentry6 = int.Parse(Console.ReadLine());
                             Console.WriteLine("Your area has been put into place on your world.");
                             LandRegions region1 = new LandRegions(_userentry1, _userentry2, _userentry6);
+                            areas.regionsl.Add($"{region1}");
                             break;
 
                             case "water":
@@ -88,6 +99,7 @@ class Program
                             _userentry7 = int.Parse(Console.ReadLine());
                             Console.WriteLine("Your area has been put into place on your world.");
                             WaterRegions region2 = new WaterRegions(_userentry1, _userentry2, _userentry6, _userentry7);
+                            areas.regionsl.Add($"{region2}");
                             break;
 
                             case "mountains":
@@ -101,6 +113,7 @@ class Program
                             _userentry8 = int.Parse(Console.ReadLine());
                             Console.WriteLine("Your area has been put into place on your world.");
                             MountainRegions region3 = new MountainRegions(_userentry1, _userentry2, _userentry7, _userentry8);
+                            areas.regionsl.Add($"{region3}");
                             break;
                             }
                     }
@@ -117,6 +130,7 @@ class Program
                         Console.WriteLine("Your state has been put into place on your world");
                         States states1 = new States(_userentry1, _userentry2, _userentry6);
                         Console.WriteLine("Would you like to continue making states? (yes/no)");
+                        states.statesl.Add($"{states1}");
                         _stop = Console.ReadLine();
                     }
                     break;
@@ -133,6 +147,7 @@ class Program
                         Console.WriteLine("Your organiztion has been placed into your world.");
                         Organizations organization1 = new Organizations(_userentry1, _userentry2, _userentry6);
                         Console.WriteLine("Would you like to continue making organizations? (yes/no) ");
+                        organizations.organizationsl.Add($"{organization1}");
                         _stop = Console.ReadLine();
                         Console.Clear();
                     }
@@ -158,13 +173,17 @@ class Program
                         Console.WriteLine("Your character has been placed into your world.");
                         Characters characters1 = new Characters(_userentry1, _userentry2, _userentry6, _userentry7, _userentry3, _userentry4, _userentry5);
                         Console.WriteLine("Would you like to continue making characters? (yes/no)");
+                        characters.charactersl.Add($"{characters1}");
                         _stop = Console.ReadLine();
                         Console.Clear();
                     }
                     break;
 
                 case "5": // Will show all info from each class.
-                    Console.WriteLine(world1.GetWorld());
+                    Console.WriteLine("Here all the info on your world.");
+                    world1.GetLists(states.statesl,characters.charactersl,organizations.organizationsl,areas.areasl,areas.regionsl);
+                    Console.WriteLine("When your ready to continue, press any key.");
+                    Console.ReadKey();
                     break;
 
                 case "6": // Exits the whole program.

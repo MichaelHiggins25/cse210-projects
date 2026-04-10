@@ -3,6 +3,14 @@ class MountainRegions: Areas
     public int _rangesHeightTo; // lowest mountain
     public int _rangesHeightFrom; // tallest mountain
     public List<string> wregion = new List<string>();
+    
+    public MountainRegions()
+    {
+        _namea = "";
+        _description = "";
+        _rangesHeightTo = 0;
+        _rangesHeightFrom = 0;
+    }
     public MountainRegions(string name, string description, int rangesHeightTo, int rangesHeightFrom)
     {
         _namea = name;

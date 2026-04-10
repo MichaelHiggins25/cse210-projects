@@ -1,6 +1,6 @@
 class Characters
 {
-    public List<string> characters = new List<string>();
+    public List<string> charactersl = new List<string>();
     private string _name;
     private string _backgroundDetails;
     private string _sex;

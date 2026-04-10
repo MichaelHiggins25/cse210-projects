@@ -7,8 +7,9 @@ class Areas: Program
     private int _numOfMontains;
     private int _index;
     protected int _regsize;
-    protected List<string> regions = new List<string>();
-    protected List<string> areas = new List<string>();
+    public List<string> areasl = new List<string>();
+    public List<string> regionsl = new List<string>();
+    
 
     public Areas ()
     {
@@ -84,7 +85,7 @@ class Areas: Program
     public string GetArea ()
     {
         return $"Here is a list of your Areas and their regions. \n" + 
-        $"Areas: {string.Join("\n", areas)} ;with these regions \n {string.Join("\n", regions)}" + 
+        $"Areas: {string.Join("\n", areasl)} ;with these regions \n {string.Join("\n", regionsl)}" + 
         $"The size of the area: {_regsize}"+
         $"\n You have {_numOfLands} of land areas, {_numOfWaters} water areas, and {_numOfMontains} mountain areas.";
     }
