@@ -44,31 +44,31 @@ class World
         _inregion = inregion;
         _inarea = inarea;
     }
-    public void GetLists (List<string> states, List<string> characters, List<string> organizationl, List<string> areas, List<string> regions)
+    public void GetLists (List<string> statesl, List<string> charactersl, List<string> organizationsl, List<string> areasl, List<string> regionsl)
     {
-        foreach (string _i in areas) 
+        foreach (string _i in areasl) 
         {
-            _output1 = string.Join(", \n", areas);
+            string _output2 = string.Join(", \n", areasl);
             Console.WriteLine(_output1);
         }
-        foreach (string _i in regions) 
+        foreach (string _i in regionsl) 
         {
-            string _output2 = string.Join(", \n", regions);
+            string _output2 = string.Join(", \n", regionsl);
             Console.WriteLine(_output2);
         }
-        foreach (string _i in states)
+        foreach (string _i in statesl)
         {
-            _output1 = string.Join(", \n", states);
+            _output1 = string.Join(", \n", statesl);
             Console.WriteLine(_output3);
         }
-        foreach (string _i in organizationl)
+        foreach (string _i in organizationsl)
         {
-            _output1 = string.Join(", \n", organizationl);
+            _output1 = string.Join(", \n", organizationsl);
             Console.WriteLine(_output4);
         }
-        foreach (string _i in characters)
+        foreach (string _i in charactersl)
         {
-            _output1 = string.Join(", \n", characters);
+            _output1 = string.Join(", \n", charactersl);
             Console.WriteLine(_output5);
         }
     }
